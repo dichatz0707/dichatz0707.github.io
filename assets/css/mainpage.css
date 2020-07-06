@@ -1,0 +1,60 @@
+@import url(header.css);
+@import url(sidebar.css);
+@import url(mainposts.css);
+
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 800px 300px;
+  grid-auto-rows: minmax(150px auto);
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  justify-content: center;
+}
+
+h2 {
+  color: dodgerblue;
+}
+
+.footer {
+  text-align: center;
+}
+
+.allposts { grid-column: 1/2;}
+.about { grid-column: 2 / 3;}
+
+@media (min-width: 320px) and (max-width: 599px) {
+  .container {
+    display: grid;
+    grid-template-columns: 320px;
+    grid-template-areas: 
+    "hd"
+    "sidebar"
+    "posts"
+    "footer"
+    ;
+  }
+  .footer {
+    grid-area: footer;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+.container {
+  display: grid;
+  grid-template-columns: 600px;
+    grid-template-areas: 
+    "hd"
+    "sidebar"
+    "posts"
+    "footer"
+    ;
+}
+
+.footer {
+  grid-area: footer;
+}  
+}

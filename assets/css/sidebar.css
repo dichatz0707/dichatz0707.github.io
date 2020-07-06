@@ -1,0 +1,35 @@
+.sidebar { 
+    grid-column: 2/3; 
+    display: flex;
+    flex-direction: column;
+  }
+
+.about {
+    color: lightslategrey;
+    border: 2px solid #888;
+    border-radius: 21px;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.social-link {
+    width: 30px;
+    height:30px;
+    margin-right: 10px;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (min-width: 320px) and (max-width: 599px) {
+    .sidebar {grid-area: sidebar;}
+}
+    
+@media (min-width: 600px) and (max-width: 900px) {
+    .sidebar {grid-area: sidebar;}
+    .menu {display: flex;
+        flex-direction: row;
+    }
+}
